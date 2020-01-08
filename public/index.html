@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Firebase Hosting</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script defer type="text/javascript" src="js/main.js"></script>
+  <script defer type="text/javascript" src="js/happy-birthday.js"></script>
+  <script defer type="text/javascript" src="js/birthday-card.js"></script>
+
+
+  <style media="screen">
+    body {
+      background: #ECEFF1;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #message {
+      background: white;
+      max-width: 360px;
+      margin: 100px auto 16px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #message h2 {
+      color: #ffa100;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    #message h1 {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0 0 16px;
+    }
+
+    #message p {
+      line-height: 140%;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    #message a {
+      display: block;
+      text-align: center;
+      background: #039be5;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    #message,
+    #message a {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #load {
+      color: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+
+      body,
+      #message {
+        margin-top: 0;
+        background: white;
+        box-shadow: none;
+      }
+
+      body {
+        border-top: 16px solid #ffa100;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="background" loop="true">
+    <source src="/audio/nights.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="container">
+    <div id="start-elements">
+      <div style="margin: 15px auto; color: grey;" class="stroke">Are you ready? </div>
+      <div style="width: fit-content; font-size: 18px; color:  darkred; margin: 20px auto;">If yes...</div>
+      <div id="startBtn" style="margin: auto;" class="button pink">Click Me</div>
+    </div>
+    <div id="happy-birthday">
+      <div> &#x1F389; Happy Birthday Tojya!!! &#x1F382;</div>
+      <div id="showCardBtn" style="z-index: 2;" class="button orange">Click Me</div>
+    </div>
+    <canvas id="birthday"></canvas>
+    <div id='card-overlay'>
+      <div id="card">
+        <div id="card-inside">
+          <div class="wrap">
+            <p>Hey there,</p>
+            <p>I'll try make this short and sweet. </p>
+            <p>Today is YOUR day. Enjoy it in the best way that you can.</p>
+
+            <p>I am so grateful you came into my world. Being with you makes everyday
+               more colorful. You inspire a lot in me and I hope
+               you get significantly closer to your goals this year.
+            </p>
+            <p>I'm looking forward to more good times together in 2020.
+             </p>
+
+             <p>I love you babe &#x1F495;. Happy Birthday.
+              </p>
+            <p class="signed">Cavaughn</p>
+
+          </div>
+        </div>
+
+        <div id="card-front">
+          <div class="wrap">
+            <h1>To my sweetie!</h1>
+          </div>
+          <button id="open">&gt;</button>
+          <button id="close">&lt;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
